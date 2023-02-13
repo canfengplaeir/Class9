@@ -89,13 +89,14 @@
                             <span class="title">常用推荐</span>
                         </a>
                     </li>
-                    <!-- <li>
-                        <a href="#社区资讯" class="smooth">
-                            <i class="linecons-doc"></i>
-                            <span class="title">社区资讯</span>
+                    <li>
+                        <a href="#学习工具" class="smooth">
+                            <i class="linecons-tag"></i>
+                            <span class="title">授课软件</span>
                         </a>
                     </li>
                     <li>
+                        <!--
                         <a>
                             <i class="linecons-lightbulb"></i>
                             <span class="title">灵感采集</span>
@@ -172,7 +173,7 @@
                             </li>
                         </ul>
                     </li> -->
-                    <!-- <li>
+                        <!-- <li>
                         <a>
                             <i class="linecons-diamond"></i>
                             <span class="title">常用工具</span>
@@ -328,7 +329,7 @@
                         <!-- <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank">
                             <i class="fa-github"></i>  GitHub
                         </a> -->
-                        <h1 id="zhongkao">加载中</h1>
+                        <h1 id="zhongkao">距离中考只剩：xxx天x小时xx分钟xx秒</h1>
                     </li>
                 </ul>
                 <!-- <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a> -->
@@ -444,6 +445,16 @@
 
                 };
 
+                // 一言api
+                // fetch('https://v1.hitokoto.cn')
+                //     .then(response => response.json())
+                //     .then(data => {
+                //         const hitokoto = document.querySelector('#baiduinput')
+                //         // const hitokoto = document.getElementById("baiduinput").setAttribute("placeholder")
+                //         hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+                //         hitokoto.innerText = data.hitokoto
+                //     })
+                //     .catch(console.error)
             </script>
             <script>
                 window.onload = function () {
@@ -463,17 +474,26 @@
                 <div class="baiduparent">
 
                     </style>
-                    <input id="baiduinput" type="text" placeholder="请输入你的搜索内容。"
+
+                    <input id="baiduinput" type="text" placeholder="请输入你的搜索内容。" autofocus="autofocus"
+                        contenteditable="true"
                         onblur="document.getElementById('baiduinput').placeholder = '请输入你的搜索内容。';">
                     <i class="fa-solid fa-xmark"></i>
                     <input type="button" value="百度一下" onclick="baidu()"
                         onblur="document.getElementById('baiduinput').placeholder = '请输入你的搜索内容。';">
 
+                    <!-- <input id="baiduinput" type="text" placeholder="请输入你的搜索内容。"
+                        onblur="document.getElementById('baiduinput').placeholder = '请输入你的搜索内容。';">
+                    <i class="fa-solid fa-xmark"></i>
+                    <input type="button" value="百度一下" onclick="baidu()"
+                        onblur="document.getElementById('baiduinput').placeholder = '请输入你的搜索内容。';">
+                     -->
+
             </form>
 
         </div>
 
-        <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="常用推荐"></i>常用推荐</h4>
+        <h4 class="text-gray"><i class="linecons-star" style="margin-right: 7px;" id="常用推荐"></i>常用推荐</h4>
         <div class="row">
 
             <!-- 哔哩哔哩bilibili -->
@@ -561,11 +581,70 @@
                 </div>
 
             </div>
-            
-        <!-- end! -->
         </div>
         <br />
+        <!-- 授课软件 -->
+        <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="授课软件"></i>授课软件</h4>
+        <div class="row">
+
+            <!-- 希沃白板 -->
+            <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info"
+                    onclick="window.open('http://easinote.seewo.com/', '_blank')" data-toggle="tooltip"
+                    data-placement="bottom" title="" data-original-title="http://easinote.seewo.com/">
+                    <div class="xe-comment-entry">
+                        <a class="xe-user-img">
+                            <img data-src="https://store-g1.seewo.com/enweb/images/share@256.png"
+                                class="lozad img-circle" width="40">
+                        </a>
+                        <span class="label label-info" data-toggle="tooltip" data-placement="left" title=""
+                            data-original-title="Hello I am a Tooltip"></span>
+                        <div class="xe-comment">
+                            <a href="#" class="xe-user-name overflowClip_1">
+                                <strong>希沃白板</strong>
+                            </a>
+                            <p class="overflowClip_2">听说老师都喜欢~</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+
+        <!-- 实用工具 -->
+        <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="授课软件"></i>实用工具</h4>
+        <div class="row">
+
+            <!-- Desmos提供一流的计算器、数字化数学课程和教学大纲，以此帮助每一位学生学习数学并爱上数学。 -->
+            <div class="col-sm-3">
+                <div class="xe-widget xe-conversations box2 label-info"
+                    onclick="window.open('https://www.desmos.com/?lang=zh-CN, '_blank')" data-toggle="tooltip"
+                    data-placement="bottom" title="" data-original-title="https://www.desmos.com/?lang=zh-CN">
+                    <div class="xe-comment-entry">
+                        <a class="xe-user-img">
+                            <img data-src="https://www.desmos.com/favicon.ico" class="lozad img-circle" width="40">
+                        </a>
+                        <span class="label label-info" data-toggle="tooltip" data-placement="left" title=""
+                            data-original-title="Hello I am a Tooltip"></span>
+                        <div class="xe-comment">
+                            <a href="#" class="xe-user-name overflowClip_1">
+                                <strong>Desmos</strong>
+                            </a>
+                            <p class="overflowClip_2">Desmos提供一流的计算器、数字化数学课程和教学大纲，以此帮助每一位学生学习数学并爱上数学。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+
+        <!-- end! -->
+
+        <br />
         <!-- END 常用推荐 -->
+        <div style="padding-top: 10%;">
+            <p style="text-align: center;font-size: larger;" id="hitokoto"></p>
+        </div>
 
         <!-- Main Footer -->
         <!-- Choose between footer styles: "footer-type-1" or "footer-type-2" -->
@@ -664,6 +743,9 @@
     <!-- JavaScripts initializations and stuff -->
     <script src="../assets/js/xenon-custom.js"></script>
     <script src="../assets/js/lozad.js"></script>
+    <!-- 一言api -->
+    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+
 </body>
 
 </html>
