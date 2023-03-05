@@ -715,11 +715,39 @@
                 </div>
             </div>
         </footer>
-        <div style="position: fixed;bottom: 3%;right: 0%;">
-            <p style="text-align: center;">感谢兔兔纸同学对本站的大力支持</p>
-            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=140
-                src="//music.163.com/outchain/player?type=2&id=421160836&auto=1&height=66"></iframe>
+        <style>
+            #closemusic {
+                /* background-color: #3fefff; */
+                border: none;
+                border-radius: 3px;
+                color: #000000;
+                position: relative;
+                left: 90%;
+                /* bottom: 375px; */
+                top: 35px;
+                /* padding: 10px 20px; */
+                opacity: 1;
+            }
+        </style>
+        <div id="musicdiv" style="position: fixed;z-index: 999;right: 0%;opacity: 0.8;bottom: 1%;">
+            <button type="submit" id="closemusic">X</button>
+            <iframe id="music" src="https://music.163.com/outchain/player?type=0&id=7684882264&auto=0&height=430"
+                width="100%" height="400" frameborder="no" marginwidth="0" marginheight="0"></iframe>
+    
         </div>
+    
+        <script>
+    
+    
+            var btn = document.getElementById("closemusic")
+            // var btn_text = document.getElementById("closemusic")
+    
+            btn.addEventListener('click', function (event) {
+                document.getElementById("music").style.display = "none";
+                document.getElementById("closemusic").style.display = "none";
+                // btn_text.innerHTML="点击我打开";
+            })
+        </script>
 
     </div>
     </div>
